@@ -17,7 +17,7 @@
   --radius-sm: 6px;
   --radius-md: 10px;
 
-  --shadow-card: 0 8px 24px rgba(15, 23, 42, 0.04);
+  --shadow-card: 0 8px 24px rgba(116, 121, 131, 0.04);
 }
 .modal-overlay {
   position: fixed;
@@ -25,7 +25,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(82, 62, 62, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,7 +88,7 @@
   flex: 1;
 }
 .cancel-btn {
-  background: white;
+  background: rgb(216, 23, 23);
   border: 1px solid #ccc;
   padding: 10px 20px;
   border-radius: 4px;
@@ -159,6 +159,8 @@
 .add-btn:hover {
   background-color: #1976d2;
 }
+
+
 
 /* The hidden menu content */
 .dropdown-content {
@@ -311,6 +313,7 @@ button:hover {
   padding: 12px;
   font-weight: 600;
   text-align: center;
+  
 }
 
 .tbody td {

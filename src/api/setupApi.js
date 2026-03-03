@@ -1,4 +1,4 @@
-import api from "./axios"; 
+import api from "./axios";
 
 export const searchSetups = ({ search, page, size, type }) => {
   return api.get("/api/setups/search", {
@@ -13,7 +13,7 @@ export const getAllTrees = () => {
 
 export const getByType = (type) => {
   return api.get(`/api/setups/${type}`);
-};  
+};
 
 export const createSetup = (payload) => {
   return api.post("/api/setups", payload);
@@ -22,6 +22,11 @@ export const createSetup = (payload) => {
 export const createSetupWithParent = (parentName, payload) => {
   return api.post(`/api/setups/create/${parentName}`, payload);
 };
+
+export const edit = (uuid, payload) => {
+  return api.put(`/api/setups/${uuid}`, payload);
+};
+
 
 export const toggleSetup = (uuid, enabled) => {
   return api.patch(`/api/setups/${uuid}/toggle`, { enabled });
@@ -35,7 +40,7 @@ export const disableSetup = (uuid) => {
   return api.patch(`/api/setups/${uuid}/disable`, { enabled: false });
 };
 
-export  default {
+export default {
   searchSetups,
   getAllTrees,
   createSetup,

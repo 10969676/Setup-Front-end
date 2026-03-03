@@ -175,7 +175,7 @@ export default function SetupManager() {
                         ))}
                       </select>
                     </div>
-
+                  
                     <div className="form-group">
                       <label>Parent Setup</label>
                       <select
@@ -187,7 +187,7 @@ export default function SetupManager() {
                         {parents.map((p) => (
                           <option key={p.name} value={p.name}>
                             {"— ".repeat(p.level)}
-                            {p.name}
+                            {`${p.name} (${p.setupType})`}
                           </option>
                         ))}
                       </select>
@@ -209,7 +209,7 @@ export default function SetupManager() {
                     <input
                       value={newTypeName}
                       onChange={(e) => setNewTypeName(e.target.value)}
-                      placeholder="e.g. ELECTRONICS"
+                      placeholder="e.g. COUNTRY OR SCHOOLS OR ELECTRONICS etc"
                     />
                   </div>
                 )}
